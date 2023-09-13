@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-6 about-img-wrap">
                 <div class="about-img wow slideInRight">
-                    <img src="media/hello-section/FILE083.JPG" alt="" class="img-responsive">
+                    <img src="{{url('/')}}/frontend/media/hello-section/FILE083.JPG" alt="" class="img-responsive">
                 </div>
             </div>
             <div class="col-md-6">
@@ -46,7 +46,7 @@
                     </div>
                     <div class="about-btns">
                         <a data-toggle="modal" data-target="#contact-modal" href="#" class="site-btn">Contact me</a>
-                        <a href="./download/Nilotpal_Banerjee.pdf" class="site-btn gray-btn">Download cv</a>
+                        <a href="{{url('/')}}/frontend/./download/Nilotpal_Banerjee.pdf" class="site-btn gray-btn">Download cv</a>
                     </div>
                 </div>
             </div>
@@ -266,7 +266,7 @@
                         <div class="col-md-3 col-sm-6 col-xs-6 mix web-sites wow flipInX">
                             <a data-toggle="modal" data-target="#portfolio-modal" data-name="patty" title="Shop web app “Patty”" href="#" class="portfolio-box">
                                 <div class="portfolio-img">
-                                    <img src="media/portfolio-images/portfolio-1.jpg" alt="">
+                                    <img src="{{url('/')}}/frontend/media/portfolio-images/portfolio-1.jpg" alt="">
                                 </div>
                                 <div class="portfolio-name">
                                     <span>Shop web app “Patty”</span>
@@ -279,7 +279,7 @@
                         <div class="col-md-3 col-sm-6 col-xs-6 mix frontend wow flipInX">
                             <a data-toggle="modal" data-target="#portfolio-modal" data-name="phoenix" title="Startup website “Phoenix”" href="#" class="portfolio-box">
                                 <div class="portfolio-img">
-                                    <img src="media/portfolio-images/portfolio-2.jpg" alt="">
+                                    <img src="{{url('/')}}/frontend/media/portfolio-images/portfolio-2.jpg" alt="">
                                 </div>
                                 <div class="portfolio-name">
                                     <span>Startup website “Phoenix”</span>
@@ -292,7 +292,7 @@
                         <div class="col-md-3 col-sm-6 col-xs-6 mix web-sites wow flipInX">
                             <a data-toggle="modal" data-target="#portfolio-modal" data-name="ewesta" title="Corporate chat “eWesta”" href="#" class="portfolio-box">
                                 <div class="portfolio-img">
-                                    <img src="media/portfolio-images/portfolio-3.jpg" alt="">
+                                    <img src="{{url('/')}}/frontend/media/portfolio-images/portfolio-3.jpg" alt="">
                                 </div>
                                 <div class="portfolio-name">
                                     <span>Corporate chat “eWesta”</span>
@@ -305,7 +305,7 @@
                         <div class="col-md-3 col-sm-6 col-xs-6 mix frontend wow flipInX">
                             <a data-toggle="modal" data-target="#portfolio-modal" data-name="foody"  title="Restaraunt web app “Foody”" href="#" class="portfolio-box">
                                 <div class="portfolio-img">
-                                    <img src="media/portfolio-images/portfolio-4.jpg" alt="">
+                                    <img src="{{url('/')}}/frontend/media/portfolio-images/portfolio-4.jpg" alt="">
                                 </div>
                                 <div class="portfolio-name">
                                     <span>Restaraunt web app “Foody”</span>
@@ -318,7 +318,7 @@
                         <div class="col-md-3 col-sm-6 col-xs-6 mix ui-ux-design wow flipInX">
                             <a data-toggle="modal" data-target="#portfolio-modal" data-name="stark" title="Game website “Stark”" href="#" class="portfolio-box">
                                 <div class="portfolio-img">
-                                    <img src="media/portfolio-images/portfolio-5.jpg" alt="">
+                                    <img src="{{url('/')}}/frontend/media/portfolio-images/portfolio-5.jpg" alt="">
                                 </div>
                                 <div class="portfolio-name">
                                     <span>Game website “Stark”</span>
@@ -331,7 +331,7 @@
                         <div class="col-md-3 col-sm-6 col-xs-6 mix web-sites wow flipInX">
                             <a data-toggle="modal" data-target="#portfolio-modal" data-name="te4h" title="Blogger website “Te4h”" href="#" class="portfolio-box">
                                 <div class="portfolio-img">
-                                    <img src="media/portfolio-images/portfolio-6.jpg" alt="">
+                                    <img src="{{url('/')}}/frontend/media/portfolio-images/portfolio-6.jpg" alt="">
                                 </div>
                                 <div class="portfolio-name">
                                     <span>Blogger website “Te4h”</span>
@@ -344,7 +344,7 @@
                         <div class="col-md-3 col-sm-6 col-xs-6 mix frontend wow flipInX">
                             <a data-toggle="modal" data-target="#portfolio-modal" data-name="lamp" title="Product website “Lamp”" href="#" class="portfolio-box">
                                 <div class="portfolio-img">
-                                    <img src="media/portfolio-images/portfolio-7.jpg" alt="">
+                                    <img src="{{url('/')}}/frontend/media/portfolio-images/portfolio-7.jpg" alt="">
                                 </div>
                                 <div class="portfolio-name">
                                     <span>Product website “Lamp”</span>
@@ -357,7 +357,7 @@
                         <div class="col-md-3 col-sm-6 col-xs-6 mix ui-ux-design wow flipInX">
                             <a data-toggle="modal" data-target="#portfolio-modal" data-name="zebra" title="Blog web app “Zebra”" href="#" class="portfolio-box">
                                 <div class="portfolio-img">
-                                    <img src="media/portfolio-images/portfolio-8.jpg" alt="">
+                                    <img src="{{url('/')}}/frontend/media/portfolio-images/portfolio-8.jpg" alt="">
                                 </div>
                                 <div class="portfolio-name">
                                     <span>Blog web app “Zebra”</span>
@@ -407,7 +407,7 @@
                 <div class="row wow zoomIn">
                     <div class="col-md-12">
                         <div class="feedback-block">
-                            <img class="feedback-image" src="media/feedback-images/feedback-1.jpg" alt="">
+                            <img class="feedback-image" src="{{url('/')}}/frontend/media/feedback-images/feedback-1.jpg" alt="">
                             <h4 class="about-tittle">Stacey Don</h4>
                             <p class="about-info">President @ Coolor Studio</p>
                             <div class="opacity-box">
@@ -424,7 +424,7 @@
                 <div class="row wow zoomIn">
                     <div class="col-md-12">
                         <div class="feedback-block">
-                            <img class="feedback-image" src="media/feedback-images/feedback-2.jpg" alt="">
+                            <img class="feedback-image" src="{{url('/')}}/frontend/media/feedback-images/feedback-2.jpg" alt="">
                             <h4 class="about-tittle">Anson Shura</h4>
                             <p class="about-info">Project Manager @ Motion Studio</p>
                             <div class="opacity-box">
