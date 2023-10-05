@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('frontend.pages.index');
 });
 
-Route::get('/admin', function () {
+Route::get('/dashboard', function () {
     return view('backend.pages.index');
+});
+
+Route::get('/admin', function () {
+    return view('backend.pages.login');
 });
