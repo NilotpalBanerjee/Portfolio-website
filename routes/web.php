@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\ProfileController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +21,11 @@ Route::get('/', function () {
     return view('frontend.pages.index');
 });
 
-Route::get('/dashboard', function () {
-    return view('backend.pages.index');
-});
+Route::get('/admin/login', [AuthController::class,'getLogin'])->name('getLogin');
+Route::post('/admin/login', [AuthController::class,'postLogin'])->name('postLogin');
 
-Route::get('/admin', function () {
-    return view('backend.pages.login');
+Route::group(['middleware'=>['admin_auth']],function(){
+    
+    Route::get('/admin/dashboard',[ProfileController::class,'dashboard'])->name('dashboard');
+    Route::get('/admin/logout',[ProfileController::class,'logout'])->name('logout');
 });

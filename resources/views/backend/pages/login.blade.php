@@ -37,34 +37,48 @@
                 <!-- <div class="col-lg-6 d-none d-lg-block bg-login-image"></div> -->
                 <div class="col-lg-6 shadow-lg mt-5">
                     <div class="p-5">
+                        @if(session('error'))
+                            <div class="text-danger text-center">{{session('error')}}</div>
+                            @endif
+                        @if(session('success'))
+                        <div class="text-success text-center">{{session('success')}}</div>
+                        <br>
+                        @endif
                         <div class="text-center">
                             <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                         </div>
-                        <form class="user">
+                        <form class="user" action="{{route('postLogin')}}" method="post">
+                            @csrf
                             <div class="form-group">
                                 <input
                                     type="email"
+                                    name="email"
                                     class="form-control form-control-user"
                                     id="exampleInputEmail"
                                     aria-describedby="emailHelp"
                                     placeholder="Enter Email Address..."
                                 />
                             </div>
+                            @error('email')
+                            <div class="text-danger">{{$message}}</div>
+                            @enderror
                             <div class="form-group">
                                 <input
                                     type="password"
+                                    name="password"
                                     class="form-control form-control-user"
                                     id="exampleInputPassword"
                                     placeholder="Password"
                                 />
                             </div>
-                            
-                            <a
-                                href="index.html"
+                            @error('password')
+                            <div class="text-danger">{{$message}}</div>
+                            @enderror
+                            <button type="submit"
                                 class="btn btn-primary btn-user btn-block"
                             >
                                 Login
-                            </a>
+                            </button>
                             <hr />
                             <a
                                 href="index.html"
