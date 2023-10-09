@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\ProfileController;
+use App\Http\Controllers\SkilsController;
 
 
 /*
@@ -28,4 +29,11 @@ Route::group(['middleware'=>['admin_auth']],function(){
     
     Route::get('/admin/dashboard',[ProfileController::class,'dashboard'])->name('dashboard');
     Route::get('/admin/logout',[ProfileController::class,'logout'])->name('logout');
+
+    Route::get('/admin/skils', [SkilsController::class,'index'])->name('skils');
+    Route::get('/admin/skils-add', [SkilsController::class,'add'])->name('add-skils');
+    Route::post('/admin/skils-store', [SkilsController::class,'store'])->name('store-skils');
+
+
 });
+
