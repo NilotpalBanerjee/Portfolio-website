@@ -8,7 +8,8 @@ use App\Models\Skils;
 class SkilsController extends Controller
 {
     public function index(){
-        return view('backend.pages.skils');
+        $skils = Skils::get();
+        return view('backend.pages.skils',['skils' => $skils]);
     }
 
     public function add(){
@@ -30,5 +31,9 @@ class SkilsController extends Controller
         $skils->save();
 
         return back()->withSuccess('Skils saved successfully');
+    }
+
+    public function edit($id){
+        
     }
 }
