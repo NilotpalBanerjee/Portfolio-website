@@ -14,12 +14,12 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <span class="font-weight-bold text-primary">Add Skils</span>
-            <a href="/admin/skils" class="btn btn-success float-right">All Skils <i class="fa fa-list-alt" aria-hidden="true"></i></a>
+            <span class="font-weight-bold text-primary">Skils Add</span>
+            <a href="/admin/skils" class="btn btn-primary float-right">All Skils <i class="fa fa-list-alt" aria-hidden="true"></i></a>
         </div>
         
         <div class="card-body">
-            <form method="post" action="{{route('store-skils')}}">
+            <form method="post" action="/admin/skils-store">
                 @csrf
                 <div class="form-group">
                     <label>Enter Name</label>

@@ -11,8 +11,5 @@ class ProfileController extends Controller
         
         return view('backend.pages.dashboard');
     }
-    public function logout(){
-        auth()->logout();
-        return redirect()->route('getLogin')->with('success','You have been successfully logged out');
-    }
+    
 }

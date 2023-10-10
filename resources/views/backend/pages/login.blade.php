@@ -30,12 +30,12 @@
         />
     </head>
 
-    <body>
+    <body class="bg-light">
         <div class="container">
             <!-- Outer Row -->
             <div class="row justify-content-center">
                 <!-- <div class="col-lg-6 d-none d-lg-block bg-login-image"></div> -->
-                <div class="col-lg-6 shadow-lg mt-5">
+                <div class="col-lg-6 shadow-lg bg-white rounded mt-5">
                     <div class="p-5">
                         @if(session('error'))
                             <div class="text-danger text-center">{{session('error')}}</div>
@@ -78,8 +78,10 @@
                                 class="btn btn-primary btn-user btn-block"
                             >
                                 Login
+
+                                <i class="fas fa-sign-in-alt"></i>
                             </button>
-                            <hr />
+                            <!-- <hr />
                             <a
                                 href="index.html"
                                 class="btn btn-google btn-user btn-block"
@@ -93,7 +95,7 @@
                             >
                                 <i class="fab fa-facebook-f fa-fw"></i> Login
                                 with Facebook
-                            </a>
+                            </a> -->
                         </form>
                     </div>
                 </div>

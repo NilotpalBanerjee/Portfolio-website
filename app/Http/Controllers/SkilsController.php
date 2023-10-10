@@ -34,6 +34,34 @@ class SkilsController extends Controller
     }
 
     public function edit($id){
-        
+        $skils = Skils::where('id', $id)->first();
+        return view('backend.pages.edit_skils',['skils' => $skils]);
+    }
+
+    public function update(Request $req, $id){
+
+        $req->validate([
+            'name' => 'required',
+            'description' => 'required',
+        ]);
+
+        $skill = Skils::where('id', $id)->first();
+
+        $skill->name = $req->name;
+        $skill->description = $req->description;
+
+        $skill->save();
+
+        return back()->withSuccess('Skils Update successfully');
+
+    }
+
+    public function delete($id){
+
+        $skill = Skils::where('id', $id)->first();
+        $skill->delete();
+
+        return back()->withSuccess('Skils Delete successfully');
+
     }
 }

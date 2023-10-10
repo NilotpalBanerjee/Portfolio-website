@@ -28,13 +28,14 @@ Route::post('/admin/login', [AuthController::class,'postLogin'])->name('postLogi
 Route::group(['middleware'=>['admin_auth']],function(){
     
     Route::get('/admin/dashboard',[ProfileController::class,'dashboard'])->name('dashboard');
-    Route::get('/admin/logout',[ProfileController::class,'logout'])->name('logout');
+    Route::get('/admin/logout',[AuthController::class,'logout'])->name('logout');
 
     Route::get('/admin/skils', [SkilsController::class,'index'])->name('skils');
     Route::get('/admin/skils-add', [SkilsController::class,'add'])->name('add-skils');
     Route::post('/admin/skils-store', [SkilsController::class,'store'])->name('store-skils');
-    Route::get('/admin/skils-edit/{id}', [SkilsController::class,'edit'])->name('edit-skils');
-
+    Route::get('/admin/{id}/skils-edit', [SkilsController::class,'edit'])->name('edit-skils');
+    Route::put('/admin/{id}/skils-update', [SkilsController::class,'update'])->name('update-skils');
+    Route::get('/admin/{id}/skils-delete', [SkilsController::class,'delete'])->name('delete-skils');
 
 });
 

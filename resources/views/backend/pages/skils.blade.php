@@ -9,8 +9,9 @@
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Skils</h6>
+        <div class="card-header">
+            <span class="font-weight-bold text-primary">All Skils</span>
+            <a href="/admin/skils-add" class="btn btn-success float-right">Add <i class="fa fa-plus" aria-hidden="true"></i></a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -19,7 +20,7 @@
                         <tr>
                             <th>Sr. No</th>
                             <th>Name</th>
-                            <th>Skils</th>
+                            <!-- <th>Skils</th> -->
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -27,7 +28,7 @@
                         <tr>
                             <th>Sr. No</th>
                             <th>Name</th>
-                            <th>Skils</th>
+                            <!-- <th>Skils</th> -->
                             <th>Action</th>
                         </tr>
                     </tfoot>
@@ -36,11 +37,11 @@
                         <tr>
                             <td>{{ $loop-> index+1 }}</td>
                             <td>{{ $sk->name }}</td>
-                            <td>{{ $sk->description }}</td>
+                            <!-- <td>{{ $sk->description }}</td> -->
                             <td class="text-center">
-                                <a href="/admin/skils-edit/{{ $sk->id }}" class="btn btn-warning"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                <a href="/admin/{{ $sk->id }}/skils-edit" class="btn btn-warning"><i class="fa fa-edit" aria-hidden="true"></i></a>
                                 <span>&nbsp;&nbsp;&nbsp;</span>
-                                <a href="#" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                <a href="/admin/{{ $sk->id }}/skils-delete" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             </td>
                         </tr>
                         @endforeach
