@@ -85,15 +85,18 @@
             </div>
             <div class="col-md-8">
                 <div class="row">
+                    
+                @foreach($skills as $sk)
                     <div class="col-md-6 wow zoomIn">
                         <div class="advantages-box">
-                            <h4>Web Development</h4>
+                            <h4>{{ $sk->name }}</h4>
                             <div class="opacity-box">
-                                <p>Javascript, Coffeescript, JAVA, Python, PHP, Go, Node.js, MongoDB, Redis, PostgreSQL, WebStorm. </p>
+                                <p>{{ $sk->description }} </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 wow zoomIn">
+                @endforeach
+                    <!-- <div class="col-md-6 wow zoomIn">
                         <hr class="mobile-hr">
                         <div class="advantages-box">
                             <h4>UI\UX Design</h4>
@@ -120,7 +123,7 @@
                                 <p>Screaming Frog, Woorank, Raventools, Semrush, Moz, WebCEO, Google Analytics, ChartBeat, CrazyEgg.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

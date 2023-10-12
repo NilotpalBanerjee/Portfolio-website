@@ -10,6 +10,7 @@ class SkilsController extends Controller
     public function index(){
         $skils = Skils::get();
         return view('backend.pages.skils',['skils' => $skils]);
+        
     }
 
     public function add(){
@@ -63,5 +64,10 @@ class SkilsController extends Controller
 
         return back()->withSuccess('Skils Delete successfully');
 
+    }
+
+    public function show(){
+        $skills = Skils::all();
+        return view('frontend.pages.index',['skills' => $skills]);
     }
 }
